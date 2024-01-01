@@ -1,11 +1,18 @@
 import { useState } from 'react'
 import './App.css'
+import Accordion from './components/Accordion/Accordion'
+//import Accordion from './components/AccordionAnimation/Accordion'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
-   <div>Accordion</div>
+
+    <div className='app'>
+      <Accordion />
+    </div>
+   
   )
 }
 
