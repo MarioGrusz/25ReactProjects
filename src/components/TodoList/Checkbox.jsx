@@ -1,6 +1,8 @@
 import { useState } from 'react';
 import './index.scss';
 
+//build full checkbox experience
+
 
 const Checkbox = ({ checked }) => {
 
