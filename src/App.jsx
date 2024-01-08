@@ -6,6 +6,7 @@ import RandomColor from "./components/RandomColor/RandomColor";
 import StarRating from "./components/StarRating/StarRating";
 import ImageSider from "./components/ImageSlider/ImageSider";
 import NotesApp from "./components/NotesApp/NotesApp";
+import LoadMoreData from "./components/LoadMoreData/LoadMoreData";
 
 const App = () => {
   return (
@@ -16,7 +17,7 @@ const App = () => {
         limit={"10"}
       /> */}
 
-      <NotesApp />
+      <LoadMoreData />
     </div>
   );
 };
