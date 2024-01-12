@@ -17,7 +17,7 @@ const App = () => {
         limit={"10"}
       /> */}
 
-      <LoadMoreData />
+      <Accordion />
     </div>
   );
 };
