@@ -1,17 +1,30 @@
-import './index.scss';
-import Checkbox from './Checkbox';
+import "./index.scss";
+import Checkbox from "./Checkbox";
+import { useState } from "react";
 
+const Task = ({ name, done, onToggle, onTrash }) => {
+  const [editMode, setEditMode] = useState(false);
+  return (
+    <div className={`task ${done ? "done" : ""}`}>
+      <Checkbox checked={done} onClick={() => onToggle(!done)} />
 
-
-const Task = ({name, done}) => {
-
-
-    return (
-        <div className='task'>
-            <Checkbox checked={done} />
-            {name}
+      {!editMode && (
+        <div className="task-name" onClick={() => setEditMode((prev) => !prev)}>
+          <span>{name}</span>
         </div>
-    )
-}
+      )}
 
-export default Task
+      {editMode && (
+        <form>
+          <input type="text" value={name} />
+        </form>
+      )}
+
+      <button onClick={onTrash} className="trash">
+        Delete
+      </button>
+    </div>
+  );
+};
+
+export default Task;
